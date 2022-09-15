@@ -165,6 +165,7 @@ import { onMount } from 'svelte';
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #1a1a1a;
     gap: 50px;
   }
 
@@ -232,14 +233,26 @@ import { onMount } from 'svelte';
   }
 
   label {
+    font-size: 1.4em;
     color: white;
   }
 
   input[type=number] {
+    background-color: white;
+    text-align: center;
+    font-weight: 600;
     font-size: 1em;
     padding: 10px;
     margin: 0px 10px;
     border-radius: 20px;
+  }
+
+  .gridControls button {
+    color: white; 
+    background: black;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 10px;
   }
 
   /* ensures the increment/decrement arrows always display */
