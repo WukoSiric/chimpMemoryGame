@@ -1,0 +1,117 @@
+<script>
+
+  let numbersInGame = 9;
+  const squareCount = 49; 
+  let gameStarted = false;
+
+  let correctSequence = [];
+  let buttonsCounter = 0;
+
+  function populateSquares(squareAmount) {
+    console.log(squareAmount);
+  }
+
+  function generateSequence() { 
+
+
+  }
+
+  function initialiseSequence() {
+    correctSequence = [];
+    for (let i = 0; i < squareCount; i++) {
+      correctSequence.push(i);
+    }
+  }
+
+  function shuffleSequence() {
+    // Uses Fisher-Yates algorithm
+    for (let i = correctSequence.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = correctSequence[i];
+      correctSequence[i] = correctSequence[j];
+      correctSequence[j] = temp;
+    }
+
+    console.log(correctSequence);
+  }
+
+  // function updateGameSquares() {
+  //   if (gameStarted) {
+  //     stopGame();
+  //   }
+
+  //   populateSquares(numbersInGame); 
+  //   return;
+  // }
+
+  function startGame() {
+    gameStarted = true;
+
+  }
+
+  function stopGame() {
+    gameStarted = false;
+  }
+
+  // function resetGame() {
+
+  // }
+
+  // function buttonPress() {
+
+  // }
+
+  // function checkSquarePress() {
+
+  // }
+
+
+</script>
+
+  <h1> Memory Game </h1>
+
+  <label for="numbersInGame">How many squares will you play with?</label>
+  <input id="numbersInGame" type="number" bind:value={numbersInGame}/>
+  <br />
+  <br />
+
+  <div class="monkeyGrid">
+    {#each Array(49) as square, i}
+      <button>{i}</button>
+    {/each}
+  </div>
+
+<style>
+  h1 {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .monkeyGrid { 
+    background-color: #424bf7;
+    border-radius: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .monkeyGrid button {
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: white;
+    min-width: 50px;
+    padding: 5px 0px;
+  }
+
+  .monkeyGrid button:hover {
+    cursor: pointer;
+  }
+
+</style>
