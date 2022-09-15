@@ -1,6 +1,6 @@
 # Chimp Memory Game
 
-##Overview
+## Overview
 With Svelte, HTML/CSS/JavaScript I managed to implement a playable version of the famous chimp memory. The game goes as follows: 
 1. View all of the squares, remembering the numbers on them
 2. Click the first square, the rest of the squares numbers will be hidden
