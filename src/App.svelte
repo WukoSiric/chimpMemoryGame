@@ -4,7 +4,7 @@ import { onMount } from 'svelte';
   import Stopwatch from './Stopwatch.svelte';
   let stopwatch;
 
-  let numbersInGame = 9;
+  let numbersInGame = 5;
   const squareCount = 49;
   let gameStarted = false;
 
@@ -114,9 +114,7 @@ import { onMount } from 'svelte';
   <!-- Time Keeping -->
   <div class="timingSection">
     <Stopwatch bind:this={stopwatch} on:load={stopwatch.startStopwatch}/>
-    <!-- {#if averageTime != null} -->
       <strong class="averageTime">Average Time: {averageTime} ms</strong>
-    <!-- {/if} -->
     <div class="times">
 
       {#each times as time, i}
