@@ -239,6 +239,7 @@ import { onMount } from 'svelte';
 
   input[type=number] {
     background-color: white;
+    color: black;
     text-align: center;
     font-weight: 600;
     font-size: 1em;
