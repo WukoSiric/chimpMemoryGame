@@ -9,5 +9,4 @@ There is also a timer which starts when the board is reset, and stops when you i
 a time is added to the board and an average time is calculated. This is to demonstrate how long it takes to memorise them. In the experiment, chimps
 have a remarkably short term memory and almost instantaneously memorise the correct order for 9 squares.  
 
-Svelte, and regular JavaScript were used to implement this project. I'm going to try and improve this project by breaking down App.svelte into separate components 
-so it's more readable. 
+Svelte, and regular JavaScript were used to implement this project. I'm going to try and improve this project by making it more responsive so it can be played on phones, abd breaking down App.svelte into separate components so it's more readable. 
