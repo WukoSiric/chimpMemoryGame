@@ -107,7 +107,7 @@ import { onMount } from 'svelte';
   });
 </script>
 
-<h1> Memory Game </h1>
+<h1> Chimp Memory Game </h1>
 <!-- Wrapper Start -->
 <div class="wrapper">
   <!-- Monkey Game -->
