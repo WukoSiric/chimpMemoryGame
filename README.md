@@ -10,4 +10,4 @@ a time is added to the board and an average time is calculated. This is to demon
 have a remarkably short term memory and almost instantaneously memorise the correct order for 9 squares.  
 
 ## Future Update Plans
-Svelte, and regular JavaScript were used to implement this project. I'm going to try and improve this project by making it more responsive so it can be played on phones, abd breaking down App.svelte into separate components so it's more readable. 
+Svelte, and regular JavaScript were used to implement this project. I'm going to try and improve this project by making it more responsive so it can be played on phones, and breaking down App.svelte into separate components so it's more readable. 
