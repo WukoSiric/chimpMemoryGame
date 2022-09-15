@@ -110,21 +110,6 @@ import { onMount } from 'svelte';
 <h1> Memory Game </h1>
 <!-- Wrapper Start -->
 <div class="wrapper">
-
-  <!-- Time Keeping -->
-  <div class="timingSection">
-    <Stopwatch bind:this={stopwatch} on:load={stopwatch.startStopwatch}/>
-      <strong class="averageTime">Average Time: {averageTime} ms</strong>
-    <div class="times">
-
-      {#each times as time, i}
-        {#if i < 18}
-          <p> {time}ms </p>
-        {/if}
-      {/each}
-    </div>
-  </div>
-
   <!-- Monkey Game -->
   <div class="monkeyGame">
 
@@ -151,6 +136,22 @@ import { onMount } from 'svelte';
     </div>
 
   </div>
+
+  <!-- Time Keeping -->
+  <div class="timingSection">
+    <Stopwatch bind:this={stopwatch} on:load={stopwatch.startStopwatch}/>
+      <strong class="averageTime">Average Time: {averageTime} ms</strong>
+    <div class="times">
+
+      {#each times as time, i}
+        {#if i < 18}
+          <p> {time}ms </p>
+        {/if}
+      {/each}
+    </div>
+  </div>
+
+
 </div>
 
 <style>
@@ -162,7 +163,8 @@ import { onMount } from 'svelte';
 
   .wrapper {
     display: flex;
-    align-items: left;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
   }
 
